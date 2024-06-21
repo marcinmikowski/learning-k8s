@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: learning-k8so
+logging:
+  level:
+    web: debug

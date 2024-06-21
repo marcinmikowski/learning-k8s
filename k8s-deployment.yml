@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learning-k8s
+spec:
+  selector:
+    matchLabels:
+      app: learning-k8s
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: learning-k8s
+    spec:
+      containers:
+        - name: learning-k8s
+          image: learning-k8s:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
